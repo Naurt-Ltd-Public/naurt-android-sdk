@@ -79,7 +79,6 @@ As Naurt accesses the phones network and GPS location services, you'll need to a
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 ```
@@ -409,6 +408,20 @@ naurt.on(
     }
 )
 ```
+
+Since v2.0.1, Naurt also mitigates mocked locations, when the device is running API level 30 or higher, has internet, and is outside. Though the user is mocking Naurt is able to provide authentic location fixes, though at a slightly degraded accuracy. In this case, the [isMocked](#naurtlocation) will be false, but the [isMockedPrevented](#naurtlocation) property will be true. Make sure to check both booleans for an accurate gauge of how many devices are spoofing locations.
+
+```kotlin
+naurt.on(
+    NaurtEvents.NEW_LOCATION,
+    NaurtEventListener<NaurtNewLocationEvent> {
+        if (it.newPoint.isMockedPrevented){
+            Log.d("App", "Mocking attempted but Naurt has returned authentic location fix.")
+        }
+    }
+)
+```
+
 It's also worthing noting that when these events happen, Naurt will be sent a notification and can later provide reports.
 
 ### Phone state
