@@ -134,7 +134,7 @@ naurt.onDestroy()
 ```
 And that's all there is to getting enhanced location fixes from Naurt!
 
-This quickstart has hopefully got you up and running with Naurt; however, most apps will require more than just this basic setup. So read on to learn more about how Naurt can help.
+This quickstart has hopefully got you up and running with Naurt; however, most apps will require more than just this basic setup. So read on to learn more about how Naurt can help. We also have an example app showing this basic integration in full. It can be found [here](https://github.com/Naurt-Ltd-Public/naurt-android-example-app)
 
 
 
