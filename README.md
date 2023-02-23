@@ -42,6 +42,7 @@ While you're in the build.gradle file, Naurt also needs to be added as a depende
 ```groovy
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 ```
 And then Naurt can be added as a dependency.
