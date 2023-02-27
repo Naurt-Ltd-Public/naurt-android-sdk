@@ -49,7 +49,7 @@ And then Naurt can be added as a dependency.
 
 ```groovy
 dependencies {
-    implementation "com.github.Naurt-Ltd-Public:naurt-android-sdk:2.0.1"
+    implementation "com.github.Naurt-Ltd-Public:naurt-android-sdk:2.0.2"
 }
 ```
 
