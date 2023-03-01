@@ -60,7 +60,7 @@ We're not quite done with dependencies yet. Naurt itself has some dependencies w
 ```groovy
 dependencies {
     implementation "androidx.core:core-ktx:1.9.0"
-    implementation "org.apache.commons:commons-compress:1.21"
+    implementation "org.apache.commons:commons-compress:1.14"
     implementation "com.google.android.gms:play-services-auth:20.4.1"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
