@@ -49,7 +49,7 @@ And then Naurt can be added as a dependency.
 
 ```groovy
 dependencies {
-    implementation "com.github.Naurt-Ltd-Public:naurt-android-sdk:2.0.6"
+    implementation "com.github.Naurt-Ltd-Public:naurt-android-sdk:2.0.8"
 }
 ```
 
@@ -265,14 +265,14 @@ naurt = Naurt(
 
 When Naurt is initialised, it will attempt to validate the API key every 24 hours. If a key cannot be validated, Android's standard GPS output will be passed through within the NaurtLocation object to ensure continuous tracking. This will be denoted within the [LocationOrigin](#naurtlocationorigin) property of [NaurtLocation](#naurtlocation).
 
-The easiest way to check whether Naurt is validated yet is by using the [getValidated](#getisvalidated) method.
+The easiest way to check whether Naurt is validated yet is by using the [getIsValidated](#getisvalidated) method.
 
 
 ```kotlin
 import com.naurt.NaurtValidationStatus
 
 
-val isMyApiKeyValidated = naurt.getValidated()
+val isMyApiKeyValidated = naurt.getIsValidated()
 
 when(isMyApiKeyValidated) {
     NaurtValidationStatus.Valid -> Log.d("app", "API key is valid.")
