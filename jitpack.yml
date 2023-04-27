@@ -1,2 +1,2 @@
 install:
-  - mvn install:install-file -Dfile=sdk-2.0.8.aar -Dpackaging=aar -DpomFile=pom.xml -DgroupId=com.naurt -DartifactId=sdk -Dversion=2.0.8 -e
+  - mvn install:install-file -Dfile=sdk-2.1.0.aar -Dpackaging=aar -DpomFile=pom.xml -DgroupId=com.naurt -DartifactId=sdk -Dversion=2.1.0 -e
